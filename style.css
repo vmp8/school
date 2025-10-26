@@ -1,0 +1,221 @@
+/* Ensure sections scroll below the sticky header */
+html {
+  scroll-padding-top: 100px; /* adjust this to match your header height */
+}
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* School Name */
+header h1 {
+  font-size: 2em;
+  letter-spacing: 1px;
+}
+
+/* Navigation */
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 600;
+  transition: 0.3s;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #0066cc;
+}
+
+nav a.active {
+  background-color: #0066cc;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+/* Sections */
+section {
+  background-color: #ffffff;
+  margin: 40px auto;
+  padding: 70px 40px;
+  width: 92%;
+  max-width: 1200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Section Headings */
+section h2 {
+  color: #004080;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  border-bottom: 3px solid #004080;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Paragraphs */
+section p {
+  font-size: 1.05em;
+  margin: 10px 0 25px;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #e6f0ff;
+  display: inline-block;
+  margin: 8px 10px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #004080;
+}
+
+/* Images */
+section img {
+  width: 95%;
+  max-width: 700px;
+  border-radius: 10px;
+  margin-top: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Form */
+form {
+  max-width: 450px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 15px;
+  color: #004080;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-top: 6px;
+  font-size: 1em;
+}
+
+form input[type="submit"] {
+  background-color: #004080;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #0066cc;
+}
+
+form input[name="message"] {
+  height: 100px;
+}
+
+/* Footer */
+footer {
+  background-color: #004080;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+  margin-top: 40px;
+}
+
+/* Gallery Page */
+#gallery {
+  background-color: #e6f0ff;
+}
+
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery-container img {
+  width: 250px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  section {
+    width: 95%;
+    padding: 50px 20px;
+  }
+
+  ul li {
+    display: block;
+    margin: 8px auto;
+  }
+
+  section img {
+    width: 100%;
+  }
+
+  .gallery-container img {
+    width: 90%;
+    height: auto;
+  }
+}
